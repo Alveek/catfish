@@ -1,18 +1,18 @@
 "use client";
 
 import Main from "@/components/main";
-import { data_1 } from "./data";
+import { data_2 } from "./data";
 
-function Page1() {
+function Page2() {
   return (
     <div>
       <Main
-        data={data_1}
+        data={data_2}
         audioSrc={"/hungry_caterpillar.mp3"}
-        nextPage="/caterpillar/page-2"
+        prevPage="/caterpillar/page-1"
       />
     </div>
   );
 }
 
-export default Page1;
+export default Page2;
