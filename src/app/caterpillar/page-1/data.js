@@ -94,7 +94,7 @@ export const data_1 = {
       word: "яйцо.",
       start: {
         min: 0,
-        sec: 9.2,
+        sec: 9.1,
       },
       finish: {
         min: 0,

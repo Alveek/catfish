@@ -2,17 +2,19 @@
 
 import { v4 } from "uuid";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { data_1 } from "./data";
 
 function Page1() {
   const [audio, setAudio] = useState(null);
+  const timer = useRef(null);
 
   useEffect(() => {
     setAudio(new Audio("/hungry_gusenica.mp3"));
   }, []);
 
   function playAudio(word) {
+    clearTimeout(timer.current);
     let startFrom = word.start.min * 60 + word.start.sec;
     let finishAt =
       word.finish.min * 60 +
@@ -23,7 +25,7 @@ function Page1() {
     audio.currentTime = startFrom;
     // audio.play();
     audio.play().then(() => {
-      setTimeout(() => {
+      timer.current = setTimeout(() => {
         audio.pause();
       }, finishAt * 1000);
     });
