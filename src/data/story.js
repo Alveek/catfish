@@ -1,277 +1,133 @@
 export const story = [
   {
     page: 1,
-    pictureSrc: "pictures/page_1.jpg",
+    pictureSrc: "/pictures/page_1.jpg",
     sentense: [
       {
+        id: 1,
         word: "На",
-        start: {
-          min: 0,
-          sec: 1,
-        },
-        finish: {
-          min: 0,
-          sec: 1.8,
-        },
+        audioSrc: "/caterpillar_audio/1_voice.mp3",
       },
       {
+        id: 2,
         word: "зеленом",
-        start: {
-          min: 0,
-          sec: 1.8,
-        },
-        finish: {
-          min: 0,
-          sec: 2.9,
-        },
+        audioSrc: "/caterpillar_audio/2_voice.mp3",
       },
       {
+        id: 3,
         word: "листке",
-        start: {
-          min: 0,
-          sec: 2.6,
-        },
-        finish: {
-          min: 0,
-          sec: 3.6,
-        },
+        audioSrc: "/caterpillar_audio/3_voice.mp3",
       },
       {
+        id: 4,
         word: "в",
-        start: {
-          min: 0,
-          sec: 3.8,
-        },
-        finish: {
-          min: 0,
-          sec: 4.5,
-        },
+        audioSrc: "/caterpillar_audio/4_voice.mp3",
       },
       {
+        id: 5,
         word: "лунном",
-        start: {
-          min: 0,
-          sec: 4.6,
-        },
-        finish: {
-          min: 0,
-          sec: 5.5,
-        },
+        audioSrc: "/caterpillar_audio/5_voice.mp3",
       },
       {
+        id: 6,
         word: "свете",
-        start: {
-          min: 0,
-          sec: 5.5,
-        },
-        finish: {
-          min: 0,
-          sec: 6.3,
-        },
+        audioSrc: "/caterpillar_audio/6_voice.mp3",
       },
       {
+        id: 7,
         word: "лежало",
-        start: {
-          min: 0,
-          sec: 6.7,
-        },
-        finish: {
-          min: 0,
-          sec: 7.9,
-        },
+        audioSrc: "/caterpillar_audio/7_voice.mp3",
       },
       {
+        id: 8,
         word: "крошечное",
-        start: {
-          min: 0,
-          sec: 7.7,
-        },
-        finish: {
-          min: 0,
-          sec: 9.1,
-        },
+        audioSrc: "/caterpillar_audio/8_voice.mp3",
       },
       {
+        id: 9,
         word: "яйцо.",
-        start: {
-          min: 0,
-          sec: 9.2,
-        },
-        finish: {
-          min: 0,
-          sec: 10.2,
-        },
+        audioSrc: "/caterpillar_audio/9_voice.mp3",
       },
     ],
   },
   {
     page: 2,
-    pictureSrc: "pictures/page_3.jpg",
+    pictureSrc: "/pictures/page_3.jpg",
     sentense: [
       {
+        id: 10,
         word: "В",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/10_voice.mp3",
       },
       {
+        id: 11,
         word: "воскресенье",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/11_voice.mp3",
       },
       {
+        id: 12,
         word: "утром",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/12_voice.mp3",
       },
       {
+        id: 13,
         word: "пригрело",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/13_voice.mp3",
       },
       {
+        id: 14,
         word: "солнышко,",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/14_voice.mp3",
       },
       {
+        id: 15,
         word: "и",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/15_voice.mp3",
       },
       {
+        id: 16,
         word: "из",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/16_voice.mp3",
       },
       {
+        id: 17,
         word: "яйца",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/17_voice.mp3",
       },
       {
+        id: 18,
         word: "появилась",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/18_voice.mp3",
       },
       {
+        id: 19,
         word: "гусеница.",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/19_voice.mp3",
       },
       {
+        id: 20,
         word: "Очень",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/20_voice.mp3",
       },
       {
+        id: 21,
         word: "маленькая.",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/21_voice.mp3",
       },
       {
+        id: 22,
         word: "И",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/22_voice.mp3",
       },
       {
+        id: 23,
         word: "очень",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/23_voice.mp3",
       },
       {
+        id: 24,
         word: "голодная",
-        start: {
-          min: 0,
-          sec: 0,
-        },
-        finish: {
-          min: 0,
-          sec: 0,
-        },
+        audioSrc: "/caterpillar_audio/24_voice.mp3",
       },
     ],
   },

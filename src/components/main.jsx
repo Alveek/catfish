@@ -21,9 +21,8 @@ const Main = ({ data, audioSrc, nextPage, prevPage }) => {
       word.finish.sec -
       (word.start.min * 60 + word.start.sec);
 
-    // audio.pause();
     audio.currentTime = startFrom;
-    // audio.play();
+
     audio.play().then(() => {
       timer.current = setTimeout(() => {
         audio.pause();
