@@ -3,13 +3,16 @@
 import { FaLeftLong, FaRightLong } from "react-icons/fa6";
 import { v4 } from "uuid";
 import Image from "next/image";
-import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
-const MainContent = ({ data, nextPage, prevPage }) => {
+const MainContent = ({ data }) => {
   const [currentAudio, setCurrentAudio] = useState(null);
   const [page, setPage] = useState(0);
   const [buttonToPress, setButtonToPress] = useState(1);
+
+  useEffect(() => {
+    setButtonToPress(data[page].sentense[0].id);
+  }, [page]);
 
   const read = (word) => {
     // Pause the current audio (if any)
