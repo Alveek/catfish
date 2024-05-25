@@ -1,10 +1,11 @@
 "use client";
-import Page1 from "./page-1/page";
+import MainContent from "@/components/main-content";
+import { story } from "@/data/story";
 
 function Caterpillar() {
   return (
     <div>
-      <Page1 />
+      <MainContent data={story} />
     </div>
   );
 }
