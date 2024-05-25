@@ -103,7 +103,7 @@ export const story = [
       },
       {
         id: 24,
-        word: "голодная",
+        word: "голодная.",
       },
     ],
   },
@@ -689,7 +689,7 @@ export const story = [
       },
       {
         id: 154,
-        word: "себя,",
+        word: "себя",
       },
       {
         id: 155,
