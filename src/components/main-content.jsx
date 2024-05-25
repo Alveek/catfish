@@ -29,7 +29,7 @@ const MainContent = ({ data, nextPage, prevPage }) => {
   };
 
   return (
-    <div className="max-w-[400px] px-4 pt-2 h-screen flex flex-col">
+    <div className="max-w-[400px] px-4 pt-2 h-svh flex flex-col">
       <div className=" max-w-[400px] h-[200px] relative">
         <Image
           className="mb-3 shadow"
