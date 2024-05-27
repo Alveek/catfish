@@ -33,7 +33,7 @@ const MainContent = ({ data, storyTitle }) => {
 
   return (
     <div className="max-w-[400px] px-4 pt-2 h-svh flex flex-col">
-      <div className=" max-w-[400px] h-[200px] relative">
+      <div className=" max-w-[400px] min-h-[200px] relative">
         <Image
           className="mb-3 shadow"
           src={data[`${page}`].pictureSrc}
@@ -48,7 +48,7 @@ const MainContent = ({ data, storyTitle }) => {
         {data[`${page}`].sentense.map((item) => {
           return (
             <button
-              className={`p-2 mr-3 mb-3 rounded shadow font-medium  ${
+              className={`p-3 mr-3 mb-3 rounded shadow font-medium  ${
                 item.id === buttonToPress &&
                 "bg-blue-200 transition-all duration-200 ease-linear"
               }`}
