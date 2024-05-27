@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center">
       {/* <Caterpillar /> */}
-      <Link href="caterpillar">Caterpillar</Link>
-      <Link href="three-cats">Three cats</Link>
+      <Link href="caterpillar">Очень голодная гусеница</Link>
+      <Link href="three-cats">Три кота</Link>
     </main>
   );
 }

@@ -5,7 +5,7 @@ import { story } from "@/data/caterpillar";
 function Caterpillar() {
   return (
     <div>
-      <MainContent data={story} />
+      <MainContent data={story} storyTitle={"caterpillar"} />
     </div>
   );
 }

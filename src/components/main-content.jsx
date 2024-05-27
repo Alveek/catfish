@@ -5,7 +5,7 @@ import { v4 } from "uuid";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const MainContent = ({ data }) => {
+const MainContent = ({ data, storyTitle }) => {
   const [currentAudio, setCurrentAudio] = useState(null);
   const [page, setPage] = useState(0);
   const [buttonToPress, setButtonToPress] = useState(1);
@@ -21,7 +21,7 @@ const MainContent = ({ data }) => {
     }
 
     // Create a new audio element and play it
-    const audio = new Audio(`/caterpillar/audio/${word.id}_voice.mp3`);
+    const audio = new Audio(`/${storyTitle}/audio/${word.id}_voice.mp3`);
     audio.play();
     audio.addEventListener("ended", () => {
       setButtonToPress((prev) => word.id + 1);
