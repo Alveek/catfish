@@ -25,9 +25,16 @@ const MainContent = ({ data, storyTitle }) => {
     audio.play();
     audio.addEventListener("ended", () => {
       setButtonToPress((prev) => word.id + 1);
+
+      if (word.last) {
+        setPage((prev) => prev + 1);
+      }
     });
 
     // Update the current audio state
+    audio.removeEventListener("ended", () => {
+      setButtonToPress((prev) => word.id + 1);
+    });
     setCurrentAudio(audio);
   };
 
@@ -35,7 +42,7 @@ const MainContent = ({ data, storyTitle }) => {
     <div className="max-w-[400px] px-4 pt-2 h-svh flex flex-col">
       <div className=" max-w-[400px] min-h-[200px] relative">
         <Image
-          className="mb-3 shadow"
+          className="mb-3 shadow object-contain"
           src={data[`${page}`].pictureSrc}
           fill
           alt="alt text"

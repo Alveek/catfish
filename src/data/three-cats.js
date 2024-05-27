@@ -26,6 +26,7 @@ export const story = [
       {
         id: 6,
         word: "белый",
+        last: true,
       },
     ],
   },
@@ -40,6 +41,7 @@ export const story = [
       {
         id: 8,
         word: "мышь...",
+        last: true,
       },
     ],
   },
@@ -62,6 +64,7 @@ export const story = [
       {
         id: 12,
         word: "ней!",
+        last: true,
       },
     ],
   },
@@ -92,6 +95,7 @@ export const story = [
       {
         id: 18,
         word: "мукой.",
+        last: true,
       },
     ],
   },
@@ -118,6 +122,7 @@ export const story = [
       {
         id: 23,
         word: "убежала.",
+        last: true,
       },
     ],
   },
@@ -152,6 +157,7 @@ export const story = [
       {
         id: 30,
         word: "котенка.",
+        last: true,
       },
     ],
   },
@@ -202,6 +208,7 @@ export const story = [
       {
         id: 41,
         word: "ней!",
+        last: true,
       },
     ],
   },
@@ -244,6 +251,7 @@ export const story = [
       {
         id: 50,
         word: "ней! ",
+        last: true,
       },
     ],
   },
@@ -258,6 +266,7 @@ export const story = [
       {
         id: 52,
         word: "ускакала...",
+        last: true,
       },
     ],
   },
@@ -292,6 +301,7 @@ export const story = [
       {
         id: 59,
         word: "котёнка.",
+        last: true,
       },
     ],
   },
@@ -326,6 +336,7 @@ export const story = [
       {
         id: 66,
         word: "рыбу...",
+        last: true,
       },
     ],
   },
@@ -348,6 +359,7 @@ export const story = [
       {
         id: 70,
         word: "ней!",
+        last: true,
       },
     ],
   },
@@ -362,6 +374,7 @@ export const story = [
       {
         id: 72,
         word: "уплыла",
+        last: true,
       },
     ],
   },
@@ -396,6 +409,7 @@ export const story = [
       {
         id: 79,
         word: "котёнка.",
+        last: true,
       },
     ],
   },
@@ -422,6 +436,7 @@ export const story = [
       {
         id: 84,
         word: "домой.",
+        last: true,
       },
     ],
   },
