@@ -1,6 +1,6 @@
 "use client";
 import MainContent from "@/components/main-content";
-import { story } from "@/data/story";
+import { story } from "@/data/caterpillar";
 
 function Caterpillar() {
   return (
