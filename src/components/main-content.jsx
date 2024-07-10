@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-import { FaLeftLong, FaRightLong } from "react-icons/fa6";
 import { v4 } from "uuid";
-import Image from "next/image";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import Header from "./header";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const MainContent = ({ data, storyTitle }) => {
+const MainContent = ({ data, storyTitle, storyTitleRu }) => {
   const [currentAudio, setCurrentAudio] = useState(null);
   const [page, setPage] = useState(0);
   const [buttonToPress, setButtonToPress] = useState(1);
@@ -22,42 +23,47 @@ const MainContent = ({ data, storyTitle }) => {
 
     // Create a new audio element and play it
     const audio = new Audio(`/${storyTitle}/audio/${word.id}_voice.mp3`);
-    audio.play();
-    audio.addEventListener("ended", () => {
+    audio.play().catch((err) => console.error("Error playing audio: ", err));
+
+    const onAudioEnded = () => {
       setButtonToPress((prev) => word.id + 1);
 
       if (word.last) {
         setPage((prev) => prev + 1);
       }
-    });
+    };
+
+    audio.addEventListener("ended", onAudioEnded);
 
     // Update the current audio state
-    audio.removeEventListener("ended", () => {
-      setButtonToPress((prev) => word.id + 1);
-    });
+    if (currentAudio) {
+      currentAudio.removeEventListener("ended", onAudioEnded);
+    }
     setCurrentAudio(audio);
   };
 
   return (
-    <div className="max-w-[400px] px-4 pt-2 h-svh flex flex-col">
-      <div className=" max-w-[400px] min-h-[200px] relative">
+    <div className="sm:max-w-2xl flex flex-col max-sm:min-h-svh sm:h-[700px] mx-auto bg-white">
+      <Header title={storyTitleRu} />
+
+      <div className="max-sm:min-h-[200px] min-h-[300px] relative">
         <Image
-          className="mb-3 shadow object-contain"
+          className="px-4 object-contain"
           src={data[`${page}`].pictureSrc}
           fill
-          alt="alt text"
+          sizes="(max-width: 768px) 600px, (max-width: 425px) 400px"
+          alt="no so great alt text"
           priority
           quality={50}
         />
       </div>
 
-      <div className="my-4  flex-grow">
+      <div className="px-4 sm:px-8 my-5 flex-1">
         {data[`${page}`].sentense.map((item) => {
           return (
             <button
               className={`p-3 mr-3 mb-3 rounded shadow font-medium  ${
-                item.id === buttonToPress &&
-                "bg-blue-200 transition-all duration-200 ease-linear"
+                item.id === buttonToPress && "bg-sky-200 transition-all duration-200 ease-linear"
               }`}
               key={v4()}
               onClick={() => read(item)}
@@ -68,23 +74,26 @@ const MainContent = ({ data, storyTitle }) => {
         })}
       </div>
 
-      <div className="flex justify-between w-full mb-2">
-        {page > 0 && (
-          <button className="w-10" onClick={() => setPage((prev) => prev - 1)}>
-            <FaLeftLong className="text-3xl" />
-          </button>
-        )}
+      <div className="px-4 flex justify-between w-full mb-4">
+        <button onClick={() => setPage((prev) => prev - 1)} disabled={page <= 0}>
+          <ArrowLeft strokeWidth={3} className="text-3xl" color={page <= 0 ? "white" : "black"} />
+        </button>
 
-        {page + 1}
+        <span>
+          {page + 1} / {data.length}
+        </span>
 
-        {page < data.length - 1 && (
-          <button
-            className="justify-self-end w-10"
-            onClick={() => setPage((prev) => prev + 1)}
-          >
-            <FaRightLong className="text-3xl" />
-          </button>
-        )}
+        <button
+          className="justify-self-end"
+          onClick={() => setPage((prev) => prev + 1)}
+          disabled={page === data.length - 1}
+        >
+          <ArrowRight
+            strokeWidth={3}
+            className="text-3xl"
+            color={page === data.length - 1 ? "white" : "black"}
+          />
+        </button>
       </div>
     </div>
   );

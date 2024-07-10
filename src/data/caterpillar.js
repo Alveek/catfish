@@ -38,6 +38,7 @@ export const story = [
       {
         id: 9,
         word: "яйцо.",
+        last: false,
       },
     ],
   },
@@ -104,6 +105,7 @@ export const story = [
       {
         id: 24,
         word: "голодная.",
+        last: true,
       },
     ],
   },
@@ -134,6 +136,7 @@ export const story = [
       {
         id: 30,
         word: "она.",
+        last: true,
       },
     ],
   },
@@ -188,6 +191,7 @@ export const story = [
       {
         id: 42,
         word: "наелась.",
+        last: true,
       },
     ],
   },
@@ -234,6 +238,7 @@ export const story = [
       {
         id: 52,
         word: "наелась.",
+        last: true,
       },
     ],
   },
@@ -288,6 +293,7 @@ export const story = [
       {
         id: 64,
         word: "наелась.",
+        last: true,
       },
     ],
   },
@@ -350,6 +356,7 @@ export const story = [
       {
         id: 78,
         word: "мало.",
+        last: true,
       },
     ],
   },
@@ -416,6 +423,7 @@ export const story = [
       {
         id: 93,
         word: "есть!",
+        last: true,
       },
     ],
   },
@@ -466,6 +474,7 @@ export const story = [
       {
         id: 104,
         word: "кусочек колбаски,",
+        last: true,
       },
     ],
   },
@@ -532,6 +541,7 @@ export const story = [
       {
         id: 119,
         word: "живот!",
+        last: true,
       },
     ],
   },
@@ -594,6 +604,7 @@ export const story = [
       {
         id: 133,
         word: "легче",
+        last: true,
       },
     ],
   },
@@ -664,6 +675,7 @@ export const story = [
       {
         id: 149,
         word: "гусеница.",
+        last: true,
       },
     ],
   },
@@ -754,6 +766,7 @@ export const story = [
       {
         id: 170,
         word: "наружу...",
+        last: true,
       },
     ],
   },

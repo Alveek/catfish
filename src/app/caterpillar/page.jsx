@@ -4,9 +4,7 @@ import { story } from "@/data/caterpillar";
 
 function Caterpillar() {
   return (
-    <div>
-      <MainContent data={story} storyTitle={"caterpillar"} />
-    </div>
+    <MainContent data={story} storyTitle={"caterpillar"} storyTitleRu={"Очень голодная гусеница"} />
   );
 }
 
