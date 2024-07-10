@@ -38,7 +38,7 @@ export const story = [
       {
         id: 9,
         word: "яйцо.",
-        last: false,
+        last: true,
       },
     ],
   },
